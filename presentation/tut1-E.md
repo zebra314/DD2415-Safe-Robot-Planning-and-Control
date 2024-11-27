@@ -1,7 +1,5 @@
 # Tutorial 1 - E
 
-## Concetps
-
 Zonotopes
 
 - A special type of polytope with a center and generators.
@@ -52,6 +50,3 @@ $$e^{rA}$$
 $$\Box(\beta_r) = \{x\in \mathbb{R}^n \;|\; ||x|| \leq \beta_r\}$$
 
 - To bloated the reachable set
-
-
-
