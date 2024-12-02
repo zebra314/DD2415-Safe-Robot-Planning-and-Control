@@ -69,3 +69,7 @@ What are the requirements for a valid Control Barrier Function?
 What is the objective of the quadratic program in the safety filter?
 
 - The objective is to minimize the deviation from the reference control input while satisfying safety constraints, ensuring the robot follows the desired path safely.
+
+Under what condition will we use underapproximation instead of overapproximation?
+
+- For example, when the robot is moving towards the goal, we can use underapproximation to allow the robot to move closer to the goal, ensure the robot will be exactly in the goal region.
