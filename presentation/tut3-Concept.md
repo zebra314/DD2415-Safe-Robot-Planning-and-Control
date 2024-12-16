@@ -1,5 +1,9 @@
 # Tutorial 3 - Concept
 
+## Regular Languages
+
+- a set of strings that can be recognized by a finite automaton
+
 ## Labeled Transition System, LTS
 
 - a tuple $T = (S, Act, δ, I, AP, L)$
@@ -10,7 +14,6 @@
   - $AP$: a set of atomic propositions (outputs)
   - $L:S\to2^{AP}$: a labeling function (output map)
     - it tells us which atomic propositions hold in each state
-    - $AP$: a set of atomic propositions
     - $2^{AP}$: the power set (subset) of $AP$
 
 ## Linear(-time) Temporal Logic, LTL
@@ -47,18 +50,31 @@
 
 ## Automata, 自動機
 
+- one automaton, two automata
 - $\omega$-automata
   - accept infinite sequences of states
-
-## Non-deterministic Finite Automaton, NFA
-
-## Deterministic Finite Automaton, DFA
-
-## Büchi Automaton
+- Deterministic Finite Automaton, DFA
+  - five tuple $M = (Q, Σ, δ, q_0, F)$  
+  - $Q$: a finite set of states
+  - $Σ$: a finite set of input symbols
+  - $δ$: a transition function, $δ: Q \times Σ \to Q$
+  - $q_0$: an initial state
+  - $F$: a set of final states
+- Non-deterministic Finite Automaton, NFA
+  - NFA will accept a string if there is at least one path that leads to an accepting state
+  - five tuple, the same as DFA, but the transition function is $δ: Q \times Σ \to 2^Q$, a set of states instead of a single state.
+  - Language that can be recognized by DFA can also be recognized by NFA.
+  - For the language that can be recognized by NFA, we can always construct an equivalent one for DFA.
+- Büchi Automaton
+  - Check if a path satisfies a formula infinitely often. 
+  - Non-deterministic
+  - $BA = (Q, Σ, δ, q_0, F)$
+- Product Automaton
 
 ## Determinism
 
 - For every state and every possible input, there is at most one next state the automaton can transition to.
+- The next state is determined or not.
 
 ## Completeness
 
@@ -67,3 +83,4 @@
 ## References
 
 - [YT video by Andrei Popescu - Introduction to LTL. Part 1: Basic Intuition](https://www.youtube.com/watch?v=a9fo3dUly8A)
+- [YT video by lydia - Regular Languages: Deterministic Finite Automaton (DFA)](https://www.youtube.com/watch?v=PK3wL7DXuuw&list=PLhqug0UEsC-IDomfNsn8e3neoy34o8oye&index=3)
